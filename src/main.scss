@@ -13,24 +13,30 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+
+    @media screen and (max-width: 767px) {
+      position: fixed;
+      width: 100%;
+      margin: 0;
+      height: 80vh;
+    }
 }
 
-.text {
-  order: 2;
-  padding-top: 40px;
-  width: 440px;
-  font-weight: bold;
-}
 
 .board {
   order: 1;
-  width: 440px;
-  height: 440px;
+  width: 360px;
+  height: 360px;
   padding: 5px;
   background-color: #57407c;
   border-radius: 7px;
   outline: none;
   position: relative;
+
+  @media screen and (min-width: 768px) {
+    width: 440px;
+    height: 440px;
+  }
 }
 
 .board .cell,
@@ -75,8 +81,8 @@ body {
 
 .cell,
 .tile {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   margin: 5px;
   line-height: 90px;
   display: inline-block;
@@ -88,6 +94,12 @@ body {
   font-family: "Clear Sans";
   color: #766;
   background-color: #3d2963;
+
+  @media screen and (min-width: 768px) {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+  }
 }
 
 .tile0 {
@@ -169,6 +181,7 @@ body {
 
 .tile {
   position: absolute;
+  background-position: center;
 }
 
 .tile.merged {
