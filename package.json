@@ -17,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "scp -r ./build/* root@194.226.121.189:/var/www/2048"
+    "deploy": "scp -r ./build/* root@194.87.62.246:/var/2048"
   },
   "eslintConfig": {
     "extends": [
